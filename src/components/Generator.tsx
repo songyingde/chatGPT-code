@@ -14,7 +14,7 @@ const defaultSetting = {
   systemRule: '',
 }
 
-const ycode = (import.meta.env.YCODE?.split(/\s*\|\s*/) ?? []).filter(Boolean)
+// const ycode = import.meta.env
 
 export interface PromptItem {
   desc: string
@@ -87,62 +87,20 @@ export default function () {
   }
 
   async function checkCode(value?: string) {
-    // 读取配置文件
-    // // const myConfig = ''
-    // let fs = require('fs')
-    // let data = JSON.parse(fs.readFileSync('src\\components\\config.json'))
-    // console.log(data.code)
-    // import.meta.env.YCODE
-    console.log(ycode)
-    console.log(value ?? codeRef.value == ycode)
-    if (value ?? codeRef.value == import.meta.env.YCODE) {
+    var ycode = '123abc'
+
+    if (value ?? codeRef.value == ycode) {
       setShown(!shown())
     }
 
-    // fetch('config.json')
+    // fetch('https://github.com/shenghuaxiong/chatGPT-code/blob/main/config.json')
     //   .then((response) => response.json())
     //   .then((config) => {
-    // 将配置赋值给一个变量
-    // const myConfig = config.code
-    // 在控制台上打印配置信息
-    //else if (value ?? codeRef.value.startsWith(config.presetting)) {
-    // 定义一个对象
-    // let newcode = value ?? codeRef.value.slice(config.presetting.length)
-    // var newconfig = { code: newcode, presetting: config.presetting }
-    // console.log(newconfig)
-    // 将对象转换为 JSON 字符串
-    // var jsonString = JSON.stringify(newconfig)
-    // 将 JSON 字符串写入到文件中
-    // var link = document.createElement('a')
-    // link.href = 'data:application/json;charset=utf-8,' + encodeURIComponent(jsonString)
-    // link.download = 'config.json'
-    // link.click()
-    // 发送 AJAX 请求将数据提交到服务器端
-    // var xhr = new XMLHttpRequest()
-    // xhr.open('POST', 'save-data.php')
-    // xhr.setRequestHeader('Content-Type', 'application/json;charset=utf-8')
-    // xhr.onreadystatechange = function () {
-    //   if (xhr.readyState === 4) {
-    //     if (xhr.status === 200) {
-    //       // 保存数据成功，更新提示消息
-    //       //document.getElementById('result').textContent = '数据已保存'
-    //     } else {
-    //       // 发生错误，更新提示消息
-    //       //document.getElementById('result').textContent = '保存数据失败：' + xhr.status
+    //     console.log(value ?? codeRef.value == config.code)
+    //     if (value ?? codeRef.value == config.code) {
+    //       setShown(!shown())
     //     }
-    //   }
-    // }
-    // xhr.send(jsonString)
-    // fs.writeFile('src\\components\\config.json', JSON.stringify(newconfig), (err) => {
-    //   if (err) {
-    //     console.error(err)
-    //   } else {
-    //     console.log('数据已保存到data.json文件中')
-    //   }
-    // })
-    // }
-    // }
-    // )
+    //   })
   }
 
   async function handleButtonClick(value?: string) {
