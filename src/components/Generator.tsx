@@ -91,7 +91,7 @@ export default function () {
     // let data = JSON.parse(fs.readFileSync('src\\components\\config.json'))
     // console.log(data.code)
 
-    fetch('src\\components\\config.json')
+    fetch('./config.json')
       .then((response) => response.json())
       .then((config) => {
         // 将配置赋值给一个变量
