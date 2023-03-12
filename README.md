@@ -2,7 +2,7 @@
 
 ## 感谢ourongxing/chatgpt-vercel对 diu8081/chatgpt-demo进行功能上的增强。在此基础上，我们进行了界面定制和改进，增加邀请码的验证，方便公众号和博主们区域管理，得到最终版： [ChatGPT](https://github.com/shenghuaxiong/chatGPT-code)。
 
-## 预览: [https://nwzz.world](https://nwzz.world)
+## 预览: [https://www.chatrobot.lol](https://www.chatrobot.lol)
 
 
 
