@@ -87,13 +87,13 @@ export default function () {
   }
 
   async function checkCode(value?: string) {
-    var ycode = '123abc'
+    var ycode = 'chat123'
 
     if (value ?? codeRef.value == ycode) {
       setShown(!shown())
     }
 
-    // fetch('https://github.com/shenghuaxiong/chatGPT-code/blob/main/config.json')
+    // fetch('https://github.com/songyingadb/chatGPT-code/blob/main/config.json')
     //   .then((response) => response.json())
     //   .then((config) => {
     //     console.log(value ?? codeRef.value == config.code)
