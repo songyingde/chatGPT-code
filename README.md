@@ -12,7 +12,7 @@
 ![](assets/screenshot1.png)
 
 ![image-20230312104739984](https://gitee.com/shenghuaxiong/typora/raw/master/img/202303121051049.png)
-
+![image-20230312105417287](https://gitee.com/shenghuaxiong/typora/raw/master/img/202303121054815.png)
 
 
 ## 部署一个你自己的（免费）
