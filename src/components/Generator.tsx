@@ -87,7 +87,7 @@ export default function () {
   }
 
   async function checkCode(value?: string) {
-    var ycode = '123abc'
+    var ycode = 'chat123'
 
     if (value ?? codeRef.value == ycode) {
       setShown(!shown())
