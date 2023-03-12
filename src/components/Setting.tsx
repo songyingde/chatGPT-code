@@ -1,5 +1,5 @@
-import { Accessor, createSignal, Setter, Show } from "solid-js"
-import type { Setting } from "./Generator"
+import { Accessor, createSignal, Setter, Show } from 'solid-js'
+import type { Setting } from './Generator'
 
 export default function Setting(props: {
   setting: Accessor<Setting>
@@ -21,17 +21,11 @@ export default function Setting(props: {
           <span ml-1>设置</span>
         </div>
         <div class="flex">
-          <div
-            class="flex items-center cursor-pointer hover:text-slate-3 "
-            onClick={props.reAnswer}
-          >
+          <div class="flex items-center cursor-pointer hover:text-slate-3 " onClick={props.reAnswer}>
             <button class="i-carbon:reset" />
             <span ml-1>重新回答</span>
           </div>
-          <div
-            class="flex items-center cursor-pointer ml-3 hover:text-slate-3 "
-            onClick={props.clear}
-          >
+          <div class="flex items-center cursor-pointer ml-3 hover:text-slate-3 " onClick={props.clear}>
             <button class="i-carbon:trash-can" />
             <span ml-1>清空对话</span>
           </div>
@@ -42,16 +36,16 @@ export default function Setting(props: {
         <div class="flex items-center hover:text-slate-3 mt-2 justify-between">
           <div class="flex items-center">
             <button class="i-carbon:api" />
-            <span ml-1>OpenAI API Key</span>
+            <span ml-1>OpenAI APIKey</span>
           </div>
           <input
             type="password"
             value={props.setting().openaiAPIKey}
             class="max-w-150px ml-1em px-1 text-slate rounded-sm bg-slate bg-op-15 focus:bg-op-20 focus:ring-0 focus:outline-none placeholder:text-slate-400 placeholder:op-30"
-            onInput={e => {
+            onInput={(e) => {
               props.setSetting({
                 ...props.setting(),
-                openaiAPIKey: (e.target as HTMLInputElement).value
+                openaiAPIKey: (e.target as HTMLInputElement).value,
               })
             }}
           />
@@ -59,16 +53,16 @@ export default function Setting(props: {
         <div class="flex items-center hover:text-slate-3 mt-2 justify-between">
           <div class="flex items-center">
             <button class="i-carbon:user-online" />
-            <span ml-1>系统角色指令</span>
+            <span ml-1>角色设定</span>
           </div>
           <input
             type="text"
             value={props.setting().systemRule}
             class="text-ellipsis  max-w-150px ml-1em px-1 text-slate rounded-sm bg-slate bg-op-15 focus:bg-op-20 focus:ring-0 focus:outline-none placeholder:text-slate-400 placeholder:op-30"
-            onInput={e => {
+            onInput={(e) => {
               props.setSetting({
                 ...props.setting(),
-                systemRule: (e.target as HTMLInputElement).value
+                systemRule: (e.target as HTMLInputElement).value,
               })
             }}
           />
@@ -84,12 +78,10 @@ export default function Setting(props: {
             max={100}
             value={String(props.setting().openaiAPITemperature)}
             class="max-w-150px w-full h-2 bg-slate bg-op-15 rounded-lg appearance-none cursor-pointer accent-slate-3"
-            onInput={e => {
+            onInput={(e) => {
               props.setSetting({
                 ...props.setting(),
-                openaiAPITemperature: Number(
-                  (e.target as HTMLInputElement).value
-                )
+                openaiAPITemperature: Number((e.target as HTMLInputElement).value),
               })
             }}
           />
@@ -104,10 +96,10 @@ export default function Setting(props: {
               type="checkbox"
               checked={props.setting().archiveSession}
               class="sr-only peer"
-              onChange={e => {
+              onChange={(e) => {
                 props.setSetting({
                   ...props.setting(),
-                  archiveSession: (e.target as HTMLInputElement).checked
+                  archiveSession: (e.target as HTMLInputElement).checked,
                 })
               }}
             />
@@ -124,10 +116,10 @@ export default function Setting(props: {
               type="checkbox"
               checked={props.setting().continuousDialogue}
               class="sr-only peer"
-              onChange={e => {
+              onChange={(e) => {
                 props.setSetting({
                   ...props.setting(),
-                  continuousDialogue: (e.target as HTMLInputElement).checked
+                  continuousDialogue: (e.target as HTMLInputElement).checked,
                 })
               }}
             />
@@ -135,6 +127,7 @@ export default function Setting(props: {
           </label>
         </div>
       </Show>
+
       <hr class="mt-2 bg-slate-5 bg-op-15 border-none h-1px"></hr>
     </div>
   )
