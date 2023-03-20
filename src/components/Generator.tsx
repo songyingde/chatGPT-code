@@ -217,7 +217,7 @@ export default function () {
       <div>
         <Show when={!shown()}>
           <div class="mt-4 flex items-end ">
-            <textarea
+            <input
               ref={codeRef!}
               id="code"
               placeholder="请输入邀请码"
